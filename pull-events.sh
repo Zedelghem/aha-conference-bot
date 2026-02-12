@@ -36,6 +36,8 @@ if ! cmp -s .aha_events .old_aha_events; then
 
     done < .new_aha_events
 
+    rm .new_aha_events
+
 fi
 
-rm .titles .links .tlinks .dates .events.html .new_aha_events
+rm .titles .links .tlinks .dates .events.html

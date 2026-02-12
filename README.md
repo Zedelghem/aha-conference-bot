@@ -1,8 +1,8 @@
 # aha-conference-bot
 A macOS specific bot to notify about new events announced by the American Historical Association 
 
-## Requirements
-A bash version supporting the =() operator (or zsh, for instance) and the following common command-line tools (probably bundled with your OS):
+## Requirements (if using the script)
+A bash version supporting the =() operator (or ZSH, for instance) and the following common command-line tools (probably bundled with your OS):
 - curl
 - sed
 - join
@@ -13,12 +13,20 @@ and less common command-line tools that will probably require installing:
 - [pup](https://github.com/ericchiang/pup) (for HTML parsing)
 - [growlrrr](https://github.com/moltenbits/growlrrr)
 
+## Requirements (if using the pre-"compiled" script)
+ZSH as your shell.
+
 ## Setup
 
 1. Put the script wherever you keep your scripts and make it executable. Download the logo as well, if you want to use it in your notifications.
 2. Using growlrrr, define a minimalistic custom app pointing to your logo file: `grrr apps add --appId AHAConferenceBot --appIcon ./aha-logo.png`.
 3. Give growlrrr and your new app permissions to send notifications in System Preferences.
 4. Schedule regular runs of the script using launchctl (or cron if you have to). [Use this StackOverflow comment as a guide.](https://stackoverflow.com/a/78712464)
+
+I recommend using [lctl](https://github.com/newtonne/lctl) to edit, check and troubleshoot launchctl entries.
+
+## Compiled version
+I uploaded the latest version "compiled" (more like encoded) with [shc](https://github.com/neurobin/shc) on an M2 Macbook Pro using ZSH as shell.
 
 ## The launchctl setup comment from StackOverflow:
 
